@@ -23,16 +23,16 @@ router.get('/user/:userId', async (req, res) => {
 // Add prediction
 router.post('/', async (req, res) => {
   try {
-    const { user_id, match_id, predicted_team1, predicted_team2 } = req.body;
+    const { user_id, match_id, predicted_team1, predicted_team2, predicted_outcome } = req.body;
 
-    if (!user_id || !match_id || predicted_team1 === undefined || predicted_team2 === undefined) {
+    if (!user_id || !match_id || (predicted_outcome === undefined && (predicted_team1 === undefined || predicted_team2 === undefined))) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
     const result = await runAsync(
-      `INSERT INTO predictions (user_id, match_id, predicted_team1, predicted_team2)
-       VALUES (?, ?, ?, ?)`,
-      [user_id, match_id, predicted_team1, predicted_team2]
+      `INSERT INTO predictions (user_id, match_id, predicted_team1, predicted_team2, predicted_outcome)
+       VALUES (?, ?, ?, ?, ?)`,
+      [user_id, match_id, predicted_team1 ?? null, predicted_team2 ?? null, predicted_outcome ?? null]
     );
 
     res.json({ id: result.id, message: 'Prediction added successfully' });
@@ -44,11 +44,11 @@ router.post('/', async (req, res) => {
 // Update prediction
 router.put('/:id', async (req, res) => {
   try {
-    const { predicted_team1, predicted_team2 } = req.body;
+    const { predicted_team1, predicted_team2, predicted_outcome } = req.body;
 
     await runAsync(
-      'UPDATE predictions SET predicted_team1 = ?, predicted_team2 = ? WHERE id = ?',
-      [predicted_team1, predicted_team2, req.params.id]
+      'UPDATE predictions SET predicted_team1 = ?, predicted_team2 = ?, predicted_outcome = ? WHERE id = ?',
+      [predicted_team1 ?? null, predicted_team2 ?? null, predicted_outcome ?? null, req.params.id]
     );
 
     res.json({ message: 'Prediction updated successfully' });

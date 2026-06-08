@@ -40,7 +40,7 @@ export function initializeDatabase() {
     database.run(`
       CREATE TABLE IF NOT EXISTS matches (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        date TEXT NOT NULL,
+        date TEXT,
         team1 TEXT NOT NULL,
         team2 TEXT NOT NULL,
         result_team1 INTEGER,
@@ -57,8 +57,9 @@ export function initializeDatabase() {
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         user_id INTEGER NOT NULL,
         match_id INTEGER NOT NULL,
-        predicted_team1 INTEGER NOT NULL,
-        predicted_team2 INTEGER NOT NULL,
+        predicted_team1 INTEGER,
+        predicted_team2 INTEGER,
+        predicted_outcome TEXT,
         points_earned INTEGER DEFAULT 0,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY (user_id) REFERENCES users(id),
@@ -66,6 +67,55 @@ export function initializeDatabase() {
         UNIQUE(user_id, match_id)
       )
     `);
+
+    // Ensure legacy DBs get the new column and nullable team prediction fields
+    database.all("PRAGMA table_info(predictions)", (err, rows) => {
+      if (err) {
+        console.error('Error reading predictions table info:', err);
+      } else {
+        const hasOutcome = rows && rows.some(r => r.name === 'predicted_outcome');
+        const team1NotNull = rows && rows.some(r => r.name === 'predicted_team1' && r.notnull === 1);
+        const team2NotNull = rows && rows.some(r => r.name === 'predicted_team2' && r.notnull === 1);
+
+        if (!hasOutcome) {
+          database.run('ALTER TABLE predictions ADD COLUMN predicted_outcome TEXT', (alterErr) => {
+            if (alterErr) console.error('Error adding predicted_outcome column:', alterErr);
+            else console.log('✅ Added predicted_outcome column to predictions');
+          });
+        }
+
+        if (team1NotNull || team2NotNull) {
+          database.serialize(() => {
+            database.run('PRAGMA foreign_keys = OFF');
+            database.run('DROP TABLE IF EXISTS predictions_new');
+            database.run(`
+              CREATE TABLE predictions_new (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER NOT NULL,
+                match_id INTEGER NOT NULL,
+                predicted_team1 INTEGER,
+                predicted_team2 INTEGER,
+                predicted_outcome TEXT,
+                points_earned INTEGER DEFAULT 0,
+                created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (user_id) REFERENCES users(id),
+                FOREIGN KEY (match_id) REFERENCES matches(id),
+                UNIQUE(user_id, match_id)
+              )
+            `);
+            database.run(`
+              INSERT INTO predictions_new (id, user_id, match_id, predicted_team1, predicted_team2, predicted_outcome, points_earned, created_at)
+              SELECT id, user_id, match_id, predicted_team1, predicted_team2, predicted_outcome, points_earned, created_at
+              FROM predictions
+            `);
+            database.run('DROP TABLE predictions');
+            database.run('ALTER TABLE predictions_new RENAME TO predictions');
+            database.run('PRAGMA foreign_keys = ON');
+            console.log('✅ Recreated predictions table with nullable predicted_team1/predicted_team2');
+          });
+        }
+      }
+    });
 
     console.log('✅ Database tables initialized');
   });

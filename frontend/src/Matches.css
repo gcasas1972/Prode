@@ -81,7 +81,8 @@
   margin-top: 15px;
 }
 
-.prediction-form input {
+.prediction-form input,
+.prediction-form select {
   flex: 1;
   padding: 8px;
   border: 1px solid #ddd;
@@ -90,7 +91,8 @@
   font-size: 14px;
 }
 
-.prediction-form input:focus {
+.prediction-form input:focus,
+.prediction-form select:focus {
   outline: none;
   border-color: #667eea;
 }

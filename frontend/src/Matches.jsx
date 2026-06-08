@@ -30,8 +30,7 @@ export function Matches({ userId }) {
       const preds = {};
       response.data.forEach(pred => {
         preds[pred.match_id] = {
-          team1: pred.predicted_team1,
-          team2: pred.predicted_team2,
+          outcome: pred.predicted_outcome || (pred.predicted_team1 > pred.predicted_team2 ? 'home' : (pred.predicted_team1 < pred.predicted_team2 ? 'away' : 'draw')),
           id: pred.id
         };
       });
@@ -41,12 +40,12 @@ export function Matches({ userId }) {
     }
   };
 
-  const handlePredictionChange = (matchId, field, value) => {
+  const handlePredictionChange = (matchId, outcome) => {
     setPredictions(prev => ({
       ...prev,
       [matchId]: {
         ...prev[matchId],
-        [field]: parseInt(value)
+        outcome
       }
     }));
   };
@@ -54,28 +53,27 @@ export function Matches({ userId }) {
   const handleSavePrediction = async (matchId) => {
     try {
       const pred = predictions[matchId];
-      if (!pred || pred.team1 === undefined || pred.team2 === undefined) {
-        alert('Por favor completa tu pronóstico');
+      if (!pred || !pred.outcome) {
+        alert('Por favor selecciona Local, Empate o Visitante');
         return;
       }
 
       if (pred.id) {
         await predictionsAPI.update(pred.id, {
-          predicted_team1: pred.team1,
-          predicted_team2: pred.team2
+          predicted_outcome: pred.outcome
         });
       } else {
         await predictionsAPI.add({
           user_id: userId,
           match_id: matchId,
-          predicted_team1: pred.team1,
-          predicted_team2: pred.team2
+          predicted_outcome: pred.outcome
         });
       }
       alert('¡Pronóstico guardado!');
       loadPredictions();
     } catch (err) {
-      alert('Error al guardar pronóstico');
+      const backendMessage = err?.response?.data?.error || err?.message || 'Error al guardar pronóstico';
+      alert(`Error al guardar pronóstico: ${backendMessage}`);
     }
   };
 
@@ -99,27 +97,22 @@ export function Matches({ userId }) {
                 {match.result_team1} - {match.result_team2}
               </div>
             )}
-            {match.status === 'pending' && userId && (
-              <div className="prediction-form">
-                <input
-                  type="number"
-                  min="0"
-                  max="10"
-                  value={predictions[match.id]?.team1 || ''}
-                  onChange={(e) => handlePredictionChange(match.id, 'team1', e.target.value)}
-                  placeholder="Goles"
-                />
-                <input
-                  type="number"
-                  min="0"
-                  max="10"
-                  value={predictions[match.id]?.team2 || ''}
-                  onChange={(e) => handlePredictionChange(match.id, 'team2', e.target.value)}
-                  placeholder="Goles"
-                />
-                <button onClick={() => handleSavePrediction(match.id)}>Guardar</button>
-              </div>
-            )}
+                  {match.status === 'pending' && userId && (
+                    <div className="prediction-form outcome-form">
+                      <select
+                        value={predictions[match.id]?.outcome || ''}
+                        onChange={(e) => handlePredictionChange(match.id, e.target.value)}
+                      >
+                        <option value="">Selecciona resultado</option>
+                        <option value="home">Local</option>
+                        <option value="draw">Empate</option>
+                        <option value="away">Visitante</option>
+                      </select>
+                      <button onClick={() => handleSavePrediction(match.id)}>
+                        {predictions[match.id]?.id ? 'Actualizar' : 'Guardar'}
+                      </button>
+                    </div>
+                  )}
           </div>
         ))}
       </div>
