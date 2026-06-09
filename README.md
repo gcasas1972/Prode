@@ -20,7 +20,7 @@ Una aplicación full-stack para realizar pronósticos del Mundial de Fútbol 202
 
 ### Backend
 - **Node.js + Express** - Servidor API
-- **SQLite3** - Base de datos
+- **MySQL** - Base de datos
 - **JWT** - Autenticación
 - **bcryptjs** - Encriptación de contraseñas
 
@@ -45,7 +45,7 @@ Prode/
     │   ├── matches.js       # Rutas de partidos
     │   ├── predictions.js   # Rutas de pronósticos
     │   └── users.js         # Rutas de usuarios
-    ├── database.js          # Configuración de SQLite
+    ├── database.js          # Configuración de MySQL
     ├── index.js             # Servidor principal
     ├── package.json
     └── .env                 # Variables de entorno
@@ -70,13 +70,25 @@ npm install
 PORT=5000
 NODE_ENV=development
 JWT_SECRET=tu_secret_key_aqui
-DATABASE_PATH=./prode.db
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=your_mysql_password
+DB_NAME=prode
 ```
 
-4. Inicia el servidor:
+4. Inicializa la base de datos y siembra los partidos:
+```bash
+npm run init-db
+npm run seed-matches
+```
+
+5. Inicia el servidor:
 ```bash
 npm run dev
 ```
+
+> Si ya tienes los partidos cargados y solo quieres actualizar las fechas, usa `npm run update-match-dates`.
 
 El servidor estará disponible en `http://localhost:5000`
 

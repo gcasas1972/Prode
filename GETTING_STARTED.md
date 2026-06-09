@@ -87,7 +87,7 @@ VALUES
 
 - **Runtime**: Node.js
 - **Framework**: Express
-- **Base de Datos**: SQLite3
+- **Base de Datos**: MySQL
 - **Autenticación**: JWT
 
 ## 📝 Archivos Clave

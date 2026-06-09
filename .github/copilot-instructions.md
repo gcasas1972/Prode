@@ -4,7 +4,7 @@ Full-stack application for World Cup predictions with user management, ranking, 
 ## Tech Stack
 - **Frontend:** React with Vite
 - **Backend:** Node.js + Express
-- **Database:** SQLite3
+- **Database:** MySQL
 - **Features:** User authentication, World Cup fixture management, predictions, ranking, scoring
 
 ## Project Setup Status
@@ -23,7 +23,7 @@ Full-stack application for World Cup predictions with user management, ranking, 
 
 1. Project scaffolding - Create frontend (React) and backend (Express) folders
 2. Install dependencies for both frontend and backend
-3. Configure SQLite database
+3. Configure MySQL database
 4. Set up API routes for users, matches, and predictions
 5. Create React components for UI
 6. Run development servers

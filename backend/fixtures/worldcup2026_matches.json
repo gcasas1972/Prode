@@ -1,127 +1,834 @@
 [
-  {"match_number":1,"date":null,"team1":"Mexico","team2":"South Africa","stage":"Group A","stadium":null},
-  {"match_number":2,"date":null,"team1":"South Korea","team2":"Czech Republic","stage":"Group A","stadium":null},
-  {"match_number":3,"date":null,"team1":"Canada","team2":"Bosnia and Herzegovina","stage":"Group B","stadium":null},
-  {"match_number":4,"date":null,"team1":"United States","team2":"Paraguay","stage":"Group D","stadium":null},
-  {"match_number":5,"date":null,"team1":"Haiti","team2":"Scotland","stage":"Group C","stadium":null},
-  {"match_number":6,"date":null,"team1":"Australia","team2":"Turkey","stage":"Group D","stadium":null},
-  {"match_number":7,"date":null,"team1":"Brazil","team2":"Morocco","stage":"Group C","stadium":null},
-  {"match_number":8,"date":null,"team1":"Qatar","team2":"Switzerland","stage":"Group B","stadium":null},
-  {"match_number":9,"date":null,"team1":"Ivory Coast","team2":"Ecuador","stage":"Group E","stadium":null},
-  {"match_number":10,"date":null,"team1":"Germany","team2":"Curacao","stage":"Group E","stadium":null},
-  {"match_number":11,"date":null,"team1":"Netherlands","team2":"Japan","stage":"Group F","stadium":null},
-  {"match_number":12,"date":null,"team1":"Sweden","team2":"Tunisia","stage":"Group F","stadium":null},
-
-  {"match_number":13,"date":null,"team1":"Saudi Arabia","team2":"Uruguay","stage":"Group H","stadium":null},
-  {"match_number":14,"date":null,"team1":"Spain","team2":"Cape Verde","stage":"Group H","stadium":null},
-  {"match_number":15,"date":null,"team1":"Iran","team2":"New Zealand","stage":"Group G","stadium":null},
-  {"match_number":16,"date":null,"team1":"Belgium","team2":"Egypt","stage":"Group G","stadium":null},
-  {"match_number":17,"date":null,"team1":"France","team2":"Senegal","stage":"Group I","stadium":null},
-  {"match_number":18,"date":null,"team1":"Iraq","team2":"Norway","stage":"Group I","stadium":null},
-  {"match_number":19,"date":null,"team1":"Argentina","team2":"Algeria","stage":"Group J","stadium":null},
-  {"match_number":20,"date":null,"team1":"Austria","team2":"Jordan","stage":"Group J","stadium":null},
-
-  {"match_number":21,"date":null,"team1":"Ghana","team2":"Panama","stage":"Group L","stadium":null},
-  {"match_number":22,"date":null,"team1":"England","team2":"Croatia","stage":"Group L","stadium":null},
-  {"match_number":23,"date":null,"team1":"Portugal","team2":"DR Congo","stage":"Group K","stadium":null},
-  {"match_number":24,"date":null,"team1":"Uzbekistan","team2":"Colombia","stage":"Group K","stadium":null},
-
-  {"match_number":25,"date":null,"team1":"Czech Republic","team2":"South Africa","stage":"Group A","stadium":null},
-  {"match_number":26,"date":null,"team1":"Switzerland","team2":"Bosnia and Herzegovina","stage":"Group B","stadium":null},
-  {"match_number":27,"date":null,"team1":"Canada","team2":"Qatar","stage":"Group B","stadium":null},
-  {"match_number":28,"date":null,"team1":"Mexico","team2":"South Korea","stage":"Group A","stadium":null},
-  {"match_number":29,"date":null,"team1":"Brazil","team2":"Haiti","stage":"Group C","stadium":null},
-  {"match_number":30,"date":null,"team1":"Scotland","team2":"Morocco","stage":"Group C","stadium":null},
-  {"match_number":31,"date":null,"team1":"Turkey","team2":"Paraguay","stage":"Group D","stadium":null},
-  {"match_number":32,"date":null,"team1":"United States","team2":"Australia","stage":"Group D","stadium":null},
-
-  {"match_number":33,"date":null,"team1":"Germany","team2":"Ivory Coast","stage":"Group E","stadium":null},
-  {"match_number":34,"date":null,"team1":"Ecuador","team2":"Curacao","stage":"Group E","stadium":null},
-  {"match_number":35,"date":null,"team1":"Netherlands","team2":"Sweden","stage":"Group F","stadium":null},
-  {"match_number":36,"date":null,"team1":"Tunisia","team2":"Japan","stage":"Group F","stadium":null},
-
-  {"match_number":37,"date":null,"team1":"Uruguay","team2":"Cape Verde","stage":"Group H","stadium":null},
-  {"match_number":38,"date":null,"team1":"Spain","team2":"Saudi Arabia","stage":"Group H","stadium":null},
-  {"match_number":39,"date":null,"team1":"Belgium","team2":"Iran","stage":"Group G","stadium":null},
-  {"match_number":40,"date":null,"team1":"New Zealand","team2":"Egypt","stage":"Group G","stadium":null},
-
-  {"match_number":41,"date":null,"team1":"Norway","team2":"Senegal","stage":"Group I","stadium":null},
-  {"match_number":42,"date":null,"team1":"France","team2":"Iraq","stage":"Group I","stadium":null},
-  {"match_number":43,"date":null,"team1":"Argentina","team2":"Austria","stage":"Group J","stadium":null},
-  {"match_number":44,"date":null,"team1":"Jordan","team2":"Algeria","stage":"Group J","stadium":null},
-
-  {"match_number":45,"date":null,"team1":"England","team2":"Ghana","stage":"Group L","stadium":null},
-  {"match_number":46,"date":null,"team1":"Panama","team2":"Croatia","stage":"Group L","stadium":null},
-  {"match_number":47,"date":null,"team1":"Portugal","team2":"Uzbekistan","stage":"Group K","stadium":null},
-  {"match_number":48,"date":null,"team1":"Colombia","team2":"DR Congo","stage":"Group K","stadium":null},
-
-  {"match_number":49,"date":null,"team1":"Scotland","team2":"Brazil","stage":"Group C","stadium":null},
-  {"match_number":50,"date":null,"team1":"Morocco","team2":"Haiti","stage":"Group C","stadium":null},
-  {"match_number":51,"date":null,"team1":"Switzerland","team2":"Canada","stage":"Group B","stadium":null},
-  {"match_number":52,"date":null,"team1":"Bosnia and Herzegovina","team2":"Qatar","stage":"Group B","stadium":null},
-
-  {"match_number":53,"date":null,"team1":"Czech Republic","team2":"Mexico","stage":"Group A","stadium":null},
-  {"match_number":54,"date":null,"team1":"South Africa","team2":"South Korea","stage":"Group A","stadium":null},
-  {"match_number":55,"date":null,"team1":"Curacao","team2":"Ivory Coast","stage":"Group E","stadium":null},
-  {"match_number":56,"date":null,"team1":"Ecuador","team2":"Germany","stage":"Group E","stadium":null},
-
-  {"match_number":57,"date":null,"team1":"Japan","team2":"Sweden","stage":"Group F","stadium":null},
-  {"match_number":58,"date":null,"team1":"Tunisia","team2":"Netherlands","stage":"Group F","stadium":null},
-  {"match_number":59,"date":null,"team1":"Turkey","team2":"United States","stage":"Group D","stadium":null},
-  {"match_number":60,"date":null,"team1":"Paraguay","team2":"Australia","stage":"Group D","stadium":null},
-
-  {"match_number":61,"date":null,"team1":"Norway","team2":"France","stage":"Group I","stadium":null},
-  {"match_number":62,"date":null,"team1":"Senegal","team2":"Iraq","stage":"Group I","stadium":null},
-  {"match_number":63,"date":null,"team1":"Egypt","team2":"Iran","stage":"Group G","stadium":null},
-  {"match_number":64,"date":null,"team1":"New Zealand","team2":"Belgium","stage":"Group G","stadium":null},
-
-  {"match_number":65,"date":null,"team1":"Cape Verde","team2":"Saudi Arabia","stage":"Group H","stadium":null},
-  {"match_number":66,"date":null,"team1":"Uruguay","team2":"Spain","stage":"Group H","stadium":null},
-  {"match_number":67,"date":null,"team1":"Panama","team2":"England","stage":"Group L","stadium":null},
-  {"match_number":68,"date":null,"team1":"Croatia","team2":"Ghana","stage":"Group L","stadium":null},
-
-  {"match_number":69,"date":null,"team1":"Algeria","team2":"Austria","stage":"Group J","stadium":null},
-  {"match_number":70,"date":null,"team1":"Jordan","team2":"Argentina","stage":"Group J","stadium":null},
-  {"match_number":71,"date":null,"team1":"Colombia","team2":"Portugal","stage":"Group K","stadium":null},
-  {"match_number":72,"date":null,"team1":"DR Congo","team2":"Uzbekistan","stage":"Group K","stadium":null},
-
-  {"match_number":73,"date":null,"team1":"Runner-up Group A","team2":"Runner-up Group B","stage":"Round of 32","stadium":null},
-  {"match_number":74,"date":null,"team1":"Winner Group E","team2":"3rd Group A/B/C/D/F","stage":"Round of 32","stadium":null},
-  {"match_number":75,"date":null,"team1":"Winner Group F","team2":"Runner-up Group C","stage":"Round of 32","stadium":null},
-  {"match_number":76,"date":null,"team1":"Winner Group C","team2":"Runner-up Group F","stage":"Round of 32","stadium":null},
-
-  {"match_number":77,"date":null,"team1":"Winner Group I","team2":"3rd Group C/D/F/G/H","stage":"Round of 32","stadium":null},
-  {"match_number":78,"date":null,"team1":"Runner-up Group E","team2":"Runner-up Group I","stage":"Round of 32","stadium":null},
-  {"match_number":79,"date":null,"team1":"Winner Group A","team2":"3rd Group C/E/F/H/I","stage":"Round of 32","stadium":null},
-  {"match_number":80,"date":null,"team1":"Winner Group L","team2":"3rd Group E/H/I/J/K","stage":"Round of 32","stadium":null},
-
-  {"match_number":81,"date":null,"team1":"Winner Group D","team2":"3rd Group B/E/F/I/J","stage":"Round of 32","stadium":null},
-  {"match_number":82,"date":null,"team1":"Winner Group G","team2":"3rd Group A/E/H/I/J","stage":"Round of 32","stadium":null},
-  {"match_number":83,"date":null,"team1":"Runner-up Group K","team2":"Runner-up Group L","stage":"Round of 32","stadium":null},
-  {"match_number":84,"date":null,"team1":"Winner Group H","team2":"Runner-up Group J","stage":"Round of 32","stadium":null},
-
-  {"match_number":85,"date":null,"team1":"Winner Group B","team2":"3rd Group E/F/G/I/J","stage":"Round of 32","stadium":null},
-  {"match_number":86,"date":null,"team1":"Winner Group J","team2":"Runner-up Group H","stage":"Round of 32","stadium":null},
-  {"match_number":87,"date":null,"team1":"Winner Group K","team2":"3rd Group D/E/I/J/L","stage":"Round of 32","stadium":null},
-  {"match_number":88,"date":null,"team1":"Runner-up Group D","team2":"Runner-up Group G","stage":"Round of 32","stadium":null},
-
-  {"match_number":89,"date":null,"team1":"Winner Match 73","team2":"Winner Match 75","stage":"Round of 16","stadium":null},
-  {"match_number":90,"date":null,"team1":"Winner Match 74","team2":"Winner Match 77","stage":"Round of 16","stadium":null},
-  {"match_number":91,"date":null,"team1":"Winner Match 76","team2":"Winner Match 78","stage":"Round of 16","stadium":null},
-  {"match_number":92,"date":null,"team1":"Winner Match 79","team2":"Winner Match 80","stage":"Round of 16","stadium":null},
-
-  {"match_number":93,"date":null,"team1":"Winner Match 81","team2":"Winner Match 82","stage":"Round of 16","stadium":null},
-  {"match_number":94,"date":null,"team1":"Winner Match 83","team2":"Winner Match 84","stage":"Round of 16","stadium":null},
-  {"match_number":95,"date":null,"team1":"Winner Match 86","team2":"Winner Match 88","stage":"Round of 16","stadium":null},
-  {"match_number":96,"date":null,"team1":"Winner Match 85","team2":"Winner Match 87","stage":"Round of 16","stadium":null},
-
-  {"match_number":97,"date":null,"team1":"Winner Match 89","team2":"Winner Match 90","stage":"Quarterfinal","stadium":null},
-  {"match_number":98,"date":null,"team1":"Winner Match 93","team2":"Winner Match 94","stage":"Quarterfinal","stadium":null},
-  {"match_number":99,"date":null,"team1":"Winner Match 91","team2":"Winner Match 92","stage":"Quarterfinal","stadium":null},
-  {"match_number":100,"date":null,"team1":"Winner Match 95","team2":"Winner Match 96","stage":"Quarterfinal","stadium":null},
-
-  {"match_number":101,"date":null,"team1":"Winner Match 97","team2":"Winner Match 98","stage":"Semifinal","stadium":null},
-  {"match_number":102,"date":null,"team1":"Winner Match 99","team2":"Winner Match 100","stage":"Semifinal","stadium":null},
-  {"match_number":103,"date":null,"team1":"Loser Match 101","team2":"Loser Match 102","stage":"Third Place","stadium":null},
-  {"match_number":104,"date":null,"team1":"Winner Match 101","team2":"Winner Match 102","stage":"Final","stadium":null}
+  {
+    "match_number": 1,
+    "date": "2026-06-11",
+    "team1": "Mexico",
+    "team2": "South Africa",
+    "stage": "Group A",
+    "stadium": null
+  },
+  {
+    "match_number": 2,
+    "date": "2026-06-11",
+    "team1": "South Korea",
+    "team2": "Czech Republic",
+    "stage": "Group A",
+    "stadium": null
+  },
+  {
+    "match_number": 3,
+    "date": "2026-06-12",
+    "team1": "Canada",
+    "team2": "Bosnia and Herzegovina",
+    "stage": "Group B",
+    "stadium": null
+  },
+  {
+    "match_number": 4,
+    "date": "2026-06-12",
+    "team1": "United States",
+    "team2": "Paraguay",
+    "stage": "Group D",
+    "stadium": null
+  },
+  {
+    "match_number": 5,
+    "date": "2026-06-13",
+    "team1": "Haiti",
+    "team2": "Scotland",
+    "stage": "Group C",
+    "stadium": null
+  },
+  {
+    "match_number": 6,
+    "date": "2026-06-13",
+    "team1": "Australia",
+    "team2": "Turkey",
+    "stage": "Group D",
+    "stadium": null
+  },
+  {
+    "match_number": 7,
+    "date": "2026-06-13",
+    "team1": "Brazil",
+    "team2": "Morocco",
+    "stage": "Group C",
+    "stadium": null
+  },
+  {
+    "match_number": 8,
+    "date": "2026-06-13",
+    "team1": "Qatar",
+    "team2": "Switzerland",
+    "stage": "Group B",
+    "stadium": null
+  },
+  {
+    "match_number": 9,
+    "date": "2026-06-14",
+    "team1": "Ivory Coast",
+    "team2": "Ecuador",
+    "stage": "Group E",
+    "stadium": null
+  },
+  {
+    "match_number": 10,
+    "date": "2026-06-14",
+    "team1": "Germany",
+    "team2": "Curacao",
+    "stage": "Group E",
+    "stadium": null
+  },
+  {
+    "match_number": 11,
+    "date": "2026-06-14",
+    "team1": "Netherlands",
+    "team2": "Japan",
+    "stage": "Group F",
+    "stadium": null
+  },
+  {
+    "match_number": 12,
+    "date": "2026-06-14",
+    "team1": "Sweden",
+    "team2": "Tunisia",
+    "stage": "Group F",
+    "stadium": null
+  },
+  {
+    "match_number": 13,
+    "date": "2026-06-15",
+    "team1": "Saudi Arabia",
+    "team2": "Uruguay",
+    "stage": "Group H",
+    "stadium": null
+  },
+  {
+    "match_number": 14,
+    "date": "2026-06-15",
+    "team1": "Spain",
+    "team2": "Cape Verde",
+    "stage": "Group H",
+    "stadium": null
+  },
+  {
+    "match_number": 15,
+    "date": "2026-06-15",
+    "team1": "Iran",
+    "team2": "New Zealand",
+    "stage": "Group G",
+    "stadium": null
+  },
+  {
+    "match_number": 16,
+    "date": "2026-06-15",
+    "team1": "Belgium",
+    "team2": "Egypt",
+    "stage": "Group G",
+    "stadium": null
+  },
+  {
+    "match_number": 17,
+    "date": "2026-06-16",
+    "team1": "France",
+    "team2": "Senegal",
+    "stage": "Group I",
+    "stadium": null
+  },
+  {
+    "match_number": 18,
+    "date": "2026-06-16",
+    "team1": "Iraq",
+    "team2": "Norway",
+    "stage": "Group I",
+    "stadium": null
+  },
+  {
+    "match_number": 19,
+    "date": "2026-06-16",
+    "team1": "Argentina",
+    "team2": "Algeria",
+    "stage": "Group J",
+    "stadium": null
+  },
+  {
+    "match_number": 20,
+    "date": "2026-06-16",
+    "team1": "Austria",
+    "team2": "Jordan",
+    "stage": "Group J",
+    "stadium": null
+  },
+  {
+    "match_number": 21,
+    "date": "2026-06-17",
+    "team1": "Ghana",
+    "team2": "Panama",
+    "stage": "Group L",
+    "stadium": null
+  },
+  {
+    "match_number": 22,
+    "date": "2026-06-17",
+    "team1": "England",
+    "team2": "Croatia",
+    "stage": "Group L",
+    "stadium": null
+  },
+  {
+    "match_number": 23,
+    "date": "2026-06-17",
+    "team1": "Portugal",
+    "team2": "DR Congo",
+    "stage": "Group K",
+    "stadium": null
+  },
+  {
+    "match_number": 24,
+    "date": "2026-06-17",
+    "team1": "Uzbekistan",
+    "team2": "Colombia",
+    "stage": "Group K",
+    "stadium": null
+  },
+  {
+    "match_number": 25,
+    "date": "2026-06-18",
+    "team1": "Czech Republic",
+    "team2": "South Africa",
+    "stage": "Group A",
+    "stadium": null
+  },
+  {
+    "match_number": 26,
+    "date": "2026-06-18",
+    "team1": "Switzerland",
+    "team2": "Bosnia and Herzegovina",
+    "stage": "Group B",
+    "stadium": null
+  },
+  {
+    "match_number": 27,
+    "date": "2026-06-18",
+    "team1": "Canada",
+    "team2": "Qatar",
+    "stage": "Group B",
+    "stadium": null
+  },
+  {
+    "match_number": 28,
+    "date": "2026-06-18",
+    "team1": "Mexico",
+    "team2": "South Korea",
+    "stage": "Group A",
+    "stadium": null
+  },
+  {
+    "match_number": 29,
+    "date": "2026-06-19",
+    "team1": "Brazil",
+    "team2": "Haiti",
+    "stage": "Group C",
+    "stadium": null
+  },
+  {
+    "match_number": 30,
+    "date": "2026-06-19",
+    "team1": "Scotland",
+    "team2": "Morocco",
+    "stage": "Group C",
+    "stadium": null
+  },
+  {
+    "match_number": 31,
+    "date": "2026-06-19",
+    "team1": "Turkey",
+    "team2": "Paraguay",
+    "stage": "Group D",
+    "stadium": null
+  },
+  {
+    "match_number": 32,
+    "date": "2026-06-19",
+    "team1": "United States",
+    "team2": "Australia",
+    "stage": "Group D",
+    "stadium": null
+  },
+  {
+    "match_number": 33,
+    "date": "2026-06-20",
+    "team1": "Germany",
+    "team2": "Ivory Coast",
+    "stage": "Group E",
+    "stadium": null
+  },
+  {
+    "match_number": 34,
+    "date": "2026-06-20",
+    "team1": "Ecuador",
+    "team2": "Curacao",
+    "stage": "Group E",
+    "stadium": null
+  },
+  {
+    "match_number": 35,
+    "date": "2026-06-20",
+    "team1": "Netherlands",
+    "team2": "Sweden",
+    "stage": "Group F",
+    "stadium": null
+  },
+  {
+    "match_number": 36,
+    "date": "2026-06-20",
+    "team1": "Tunisia",
+    "team2": "Japan",
+    "stage": "Group F",
+    "stadium": null
+  },
+  {
+    "match_number": 37,
+    "date": "2026-06-21",
+    "team1": "Uruguay",
+    "team2": "Cape Verde",
+    "stage": "Group H",
+    "stadium": null
+  },
+  {
+    "match_number": 38,
+    "date": "2026-06-21",
+    "team1": "Spain",
+    "team2": "Saudi Arabia",
+    "stage": "Group H",
+    "stadium": null
+  },
+  {
+    "match_number": 39,
+    "date": "2026-06-21",
+    "team1": "Belgium",
+    "team2": "Iran",
+    "stage": "Group G",
+    "stadium": null
+  },
+  {
+    "match_number": 40,
+    "date": "2026-06-21",
+    "team1": "New Zealand",
+    "team2": "Egypt",
+    "stage": "Group G",
+    "stadium": null
+  },
+  {
+    "match_number": 41,
+    "date": "2026-06-22",
+    "team1": "Norway",
+    "team2": "Senegal",
+    "stage": "Group I",
+    "stadium": null
+  },
+  {
+    "match_number": 42,
+    "date": "2026-06-22",
+    "team1": "France",
+    "team2": "Iraq",
+    "stage": "Group I",
+    "stadium": null
+  },
+  {
+    "match_number": 43,
+    "date": "2026-06-22",
+    "team1": "Argentina",
+    "team2": "Austria",
+    "stage": "Group J",
+    "stadium": null
+  },
+  {
+    "match_number": 44,
+    "date": "2026-06-22",
+    "team1": "Jordan",
+    "team2": "Algeria",
+    "stage": "Group J",
+    "stadium": null
+  },
+  {
+    "match_number": 45,
+    "date": "2026-06-23",
+    "team1": "England",
+    "team2": "Ghana",
+    "stage": "Group L",
+    "stadium": null
+  },
+  {
+    "match_number": 46,
+    "date": "2026-06-23",
+    "team1": "Panama",
+    "team2": "Croatia",
+    "stage": "Group L",
+    "stadium": null
+  },
+  {
+    "match_number": 47,
+    "date": "2026-06-23",
+    "team1": "Portugal",
+    "team2": "Uzbekistan",
+    "stage": "Group K",
+    "stadium": null
+  },
+  {
+    "match_number": 48,
+    "date": "2026-06-23",
+    "team1": "Colombia",
+    "team2": "DR Congo",
+    "stage": "Group K",
+    "stadium": null
+  },
+  {
+    "match_number": 49,
+    "date": "2026-06-24",
+    "team1": "Scotland",
+    "team2": "Brazil",
+    "stage": "Group C",
+    "stadium": null
+  },
+  {
+    "match_number": 50,
+    "date": "2026-06-24",
+    "team1": "Morocco",
+    "team2": "Haiti",
+    "stage": "Group C",
+    "stadium": null
+  },
+  {
+    "match_number": 51,
+    "date": "2026-06-24",
+    "team1": "Switzerland",
+    "team2": "Canada",
+    "stage": "Group B",
+    "stadium": null
+  },
+  {
+    "match_number": 52,
+    "date": "2026-06-24",
+    "team1": "Bosnia and Herzegovina",
+    "team2": "Qatar",
+    "stage": "Group B",
+    "stadium": null
+  },
+  {
+    "match_number": 53,
+    "date": "2026-06-24",
+    "team1": "Czech Republic",
+    "team2": "Mexico",
+    "stage": "Group A",
+    "stadium": null
+  },
+  {
+    "match_number": 54,
+    "date": "2026-06-24",
+    "team1": "South Africa",
+    "team2": "South Korea",
+    "stage": "Group A",
+    "stadium": null
+  },
+  {
+    "match_number": 55,
+    "date": "2026-06-25",
+    "team1": "Curacao",
+    "team2": "Ivory Coast",
+    "stage": "Group E",
+    "stadium": null
+  },
+  {
+    "match_number": 56,
+    "date": "2026-06-25",
+    "team1": "Ecuador",
+    "team2": "Germany",
+    "stage": "Group E",
+    "stadium": null
+  },
+  {
+    "match_number": 57,
+    "date": "2026-06-25",
+    "team1": "Japan",
+    "team2": "Sweden",
+    "stage": "Group F",
+    "stadium": null
+  },
+  {
+    "match_number": 58,
+    "date": "2026-06-25",
+    "team1": "Tunisia",
+    "team2": "Netherlands",
+    "stage": "Group F",
+    "stadium": null
+  },
+  {
+    "match_number": 59,
+    "date": "2026-06-25",
+    "team1": "Turkey",
+    "team2": "United States",
+    "stage": "Group D",
+    "stadium": null
+  },
+  {
+    "match_number": 60,
+    "date": "2026-06-25",
+    "team1": "Paraguay",
+    "team2": "Australia",
+    "stage": "Group D",
+    "stadium": null
+  },
+  {
+    "match_number": 61,
+    "date": "2026-06-26",
+    "team1": "Norway",
+    "team2": "France",
+    "stage": "Group I",
+    "stadium": null
+  },
+  {
+    "match_number": 62,
+    "date": "2026-06-26",
+    "team1": "Senegal",
+    "team2": "Iraq",
+    "stage": "Group I",
+    "stadium": null
+  },
+  {
+    "match_number": 63,
+    "date": "2026-06-26",
+    "team1": "Egypt",
+    "team2": "Iran",
+    "stage": "Group G",
+    "stadium": null
+  },
+  {
+    "match_number": 64,
+    "date": "2026-06-26",
+    "team1": "New Zealand",
+    "team2": "Belgium",
+    "stage": "Group G",
+    "stadium": null
+  },
+  {
+    "match_number": 65,
+    "date": "2026-06-26",
+    "team1": "Cape Verde",
+    "team2": "Saudi Arabia",
+    "stage": "Group H",
+    "stadium": null
+  },
+  {
+    "match_number": 66,
+    "date": "2026-06-26",
+    "team1": "Uruguay",
+    "team2": "Spain",
+    "stage": "Group H",
+    "stadium": null
+  },
+  {
+    "match_number": 67,
+    "date": "2026-06-27",
+    "team1": "Panama",
+    "team2": "England",
+    "stage": "Group L",
+    "stadium": null
+  },
+  {
+    "match_number": 68,
+    "date": "2026-06-27",
+    "team1": "Croatia",
+    "team2": "Ghana",
+    "stage": "Group L",
+    "stadium": null
+  },
+  {
+    "match_number": 69,
+    "date": "2026-06-27",
+    "team1": "Algeria",
+    "team2": "Austria",
+    "stage": "Group J",
+    "stadium": null
+  },
+  {
+    "match_number": 70,
+    "date": "2026-06-27",
+    "team1": "Jordan",
+    "team2": "Argentina",
+    "stage": "Group J",
+    "stadium": null
+  },
+  {
+    "match_number": 71,
+    "date": "2026-06-27",
+    "team1": "Colombia",
+    "team2": "Portugal",
+    "stage": "Group K",
+    "stadium": null
+  },
+  {
+    "match_number": 72,
+    "date": "2026-06-27",
+    "team1": "DR Congo",
+    "team2": "Uzbekistan",
+    "stage": "Group K",
+    "stadium": null
+  },
+  {
+    "match_number": 73,
+    "date": "2026-06-28",
+    "team1": "Runner-up Group A",
+    "team2": "Runner-up Group B",
+    "stage": "Round of 32",
+    "stadium": null
+  },
+  {
+    "match_number": 74,
+    "date": "2026-06-29",
+    "team1": "Winner Group E",
+    "team2": "3rd Group A/B/C/D/F",
+    "stage": "Round of 32",
+    "stadium": null
+  },
+  {
+    "match_number": 75,
+    "date": "2026-06-29",
+    "team1": "Winner Group F",
+    "team2": "Runner-up Group C",
+    "stage": "Round of 32",
+    "stadium": null
+  },
+  {
+    "match_number": 76,
+    "date": "2026-06-29",
+    "team1": "Winner Group C",
+    "team2": "Runner-up Group F",
+    "stage": "Round of 32",
+    "stadium": null
+  },
+  {
+    "match_number": 77,
+    "date": "2026-06-30",
+    "team1": "Winner Group I",
+    "team2": "3rd Group C/D/F/G/H",
+    "stage": "Round of 32",
+    "stadium": null
+  },
+  {
+    "match_number": 78,
+    "date": "2026-06-30",
+    "team1": "Runner-up Group E",
+    "team2": "Runner-up Group I",
+    "stage": "Round of 32",
+    "stadium": null
+  },
+  {
+    "match_number": 79,
+    "date": "2026-06-30",
+    "team1": "Winner Group A",
+    "team2": "3rd Group C/E/F/H/I",
+    "stage": "Round of 32",
+    "stadium": null
+  },
+  {
+    "match_number": 80,
+    "date": "2026-07-01",
+    "team1": "Winner Group L",
+    "team2": "3rd Group E/H/I/J/K",
+    "stage": "Round of 32",
+    "stadium": null
+  },
+  {
+    "match_number": 81,
+    "date": "2026-07-01",
+    "team1": "Winner Group D",
+    "team2": "3rd Group B/E/F/I/J",
+    "stage": "Round of 32",
+    "stadium": null
+  },
+  {
+    "match_number": 82,
+    "date": "2026-07-01",
+    "team1": "Winner Group G",
+    "team2": "3rd Group A/E/H/I/J",
+    "stage": "Round of 32",
+    "stadium": null
+  },
+  {
+    "match_number": 83,
+    "date": "2026-07-02",
+    "team1": "Runner-up Group K",
+    "team2": "Runner-up Group L",
+    "stage": "Round of 32",
+    "stadium": null
+  },
+  {
+    "match_number": 84,
+    "date": "2026-07-02",
+    "team1": "Winner Group H",
+    "team2": "Runner-up Group J",
+    "stage": "Round of 32",
+    "stadium": null
+  },
+  {
+    "match_number": 85,
+    "date": "2026-07-02",
+    "team1": "Winner Group B",
+    "team2": "3rd Group E/F/G/I/J",
+    "stage": "Round of 32",
+    "stadium": null
+  },
+  {
+    "match_number": 86,
+    "date": "2026-07-03",
+    "team1": "Winner Group J",
+    "team2": "Runner-up Group H",
+    "stage": "Round of 32",
+    "stadium": null
+  },
+  {
+    "match_number": 87,
+    "date": "2026-07-03",
+    "team1": "Winner Group K",
+    "team2": "3rd Group D/E/I/J/L",
+    "stage": "Round of 32",
+    "stadium": null
+  },
+  {
+    "match_number": 88,
+    "date": "2026-07-03",
+    "team1": "Runner-up Group D",
+    "team2": "Runner-up Group G",
+    "stage": "Round of 32",
+    "stadium": null
+  },
+  {
+    "match_number": 89,
+    "date": "2026-07-04",
+    "team1": "Winner Match 73",
+    "team2": "Winner Match 75",
+    "stage": "Round of 16",
+    "stadium": null
+  },
+  {
+    "match_number": 90,
+    "date": "2026-07-04",
+    "team1": "Winner Match 74",
+    "team2": "Winner Match 77",
+    "stage": "Round of 16",
+    "stadium": null
+  },
+  {
+    "match_number": 91,
+    "date": "2026-07-05",
+    "team1": "Winner Match 76",
+    "team2": "Winner Match 78",
+    "stage": "Round of 16",
+    "stadium": null
+  },
+  {
+    "match_number": 92,
+    "date": "2026-07-05",
+    "team1": "Winner Match 79",
+    "team2": "Winner Match 80",
+    "stage": "Round of 16",
+    "stadium": null
+  },
+  {
+    "match_number": 93,
+    "date": "2026-07-06",
+    "team1": "Winner Match 81",
+    "team2": "Winner Match 82",
+    "stage": "Round of 16",
+    "stadium": null
+  },
+  {
+    "match_number": 94,
+    "date": "2026-07-06",
+    "team1": "Winner Match 83",
+    "team2": "Winner Match 84",
+    "stage": "Round of 16",
+    "stadium": null
+  },
+  {
+    "match_number": 95,
+    "date": "2026-07-07",
+    "team1": "Winner Match 86",
+    "team2": "Winner Match 88",
+    "stage": "Round of 16",
+    "stadium": null
+  },
+  {
+    "match_number": 96,
+    "date": "2026-07-07",
+    "team1": "Winner Match 85",
+    "team2": "Winner Match 87",
+    "stage": "Round of 16",
+    "stadium": null
+  },
+  {
+    "match_number": 97,
+    "date": "2026-07-09",
+    "team1": "Winner Match 89",
+    "team2": "Winner Match 90",
+    "stage": "Quarterfinal",
+    "stadium": null
+  },
+  {
+    "match_number": 98,
+    "date": "2026-07-10",
+    "team1": "Winner Match 93",
+    "team2": "Winner Match 94",
+    "stage": "Quarterfinal",
+    "stadium": null
+  },
+  {
+    "match_number": 99,
+    "date": "2026-07-11",
+    "team1": "Winner Match 91",
+    "team2": "Winner Match 92",
+    "stage": "Quarterfinal",
+    "stadium": null
+  },
+  {
+    "match_number": 100,
+    "date": "2026-07-11",
+    "team1": "Winner Match 95",
+    "team2": "Winner Match 96",
+    "stage": "Quarterfinal",
+    "stadium": null
+  },
+  {
+    "match_number": 101,
+    "date": "2026-07-14",
+    "team1": "Winner Match 97",
+    "team2": "Winner Match 98",
+    "stage": "Semifinal",
+    "stadium": null
+  },
+  {
+    "match_number": 102,
+    "date": "2026-07-15",
+    "team1": "Winner Match 99",
+    "team2": "Winner Match 100",
+    "stage": "Semifinal",
+    "stadium": null
+  },
+  {
+    "match_number": 103,
+    "date": "2026-07-18",
+    "team1": "Loser Match 101",
+    "team2": "Loser Match 102",
+    "stage": "Third Place",
+    "stadium": null
+  },
+  {
+    "match_number": 104,
+    "date": "2026-07-19",
+    "team1": "Winner Match 101",
+    "team2": "Winner Match 102",
+    "stage": "Final",
+    "stadium": null
+  }
 ]

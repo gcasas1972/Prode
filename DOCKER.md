@@ -31,7 +31,11 @@ Edita `backend/.env` y cambia `JWT_SECRET` por una clave segura:
 NODE_ENV=production
 PORT=5000
 JWT_SECRET=tu_clave_secreta_muy_segura
-DATABASE_PATH=/app/prode.db
+DB_HOST=db
+DB_PORT=3306
+DB_USER=prode
+DB_PASSWORD=prode_password
+DB_NAME=prode
 ```
 
 ### 3. Construir y ejecutar los contenedores
@@ -108,9 +112,9 @@ Prode/
 
 ## Persistencia de Datos
 
-- La base de datos SQLite (`prode.db`) se mantiene en un volumen en `backend/prode.db`
+- La base de datos MySQL se mantiene en el volumen Docker `db-data`
 - Los datos persisten entre reinicios de contenedores
-- Para hacer backup: `cp backend/prode.db backend/prode.db.backup`
+- Para hacer backup: usa `mysqldump` o herramientas de exportación de MySQL
 
 ## Escalado en Producción
 

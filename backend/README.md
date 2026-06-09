@@ -21,8 +21,14 @@ Crea un archivo `.env` en la raíz del backend:
 PORT=5000
 NODE_ENV=development
 JWT_SECRET=cambiar_esta_clave_en_produccion
-DATABASE_PATH=./prode.db
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=root
+DB_NAME=prode
 ```
+
+Si estás usando un servidor MySQL local con usuario `root` sin contraseña, deja `DB_PASSWORD` vacío. Si tu MySQL usa otra contraseña o usuario, ajústalos en este archivo.
 
 ## Ejecución
 
@@ -43,7 +49,7 @@ Ver [README.md](../README.md#-api-endpoints) principal para más detalles.
 ## Estructura del Código
 
 - `index.js` - Configuración principal del servidor
-- `database.js` - Manejo de SQLite y migraciones
+- `database.js` - Manejo de MySQL y creación de tablas
 - `routes/` - Endpoints de la API
   - `auth.js` - Autenticación de usuarios
   - `matches.js` - Gestión de partidos
