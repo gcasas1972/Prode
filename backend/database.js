@@ -81,6 +81,19 @@ export async function initializeDatabase() {
     await pool.query(createMatchesTable);
     await pool.query(createPredictionsTable);
 
+    const [columns] = await pool.query(
+      `SELECT COUNT(*) AS count
+       FROM information_schema.columns
+       WHERE table_schema = ?
+         AND table_name = 'users'
+         AND column_name = 'role'`,
+      [DB_NAME]
+    );
+
+    if (columns[0].count === 0) {
+      await pool.query(`ALTER TABLE users ADD COLUMN role VARCHAR(50) DEFAULT 'user';`);
+    }
+
     console.log('✅ Database tables initialized');
   } catch (error) {
     console.error('Error initializing database:', error);

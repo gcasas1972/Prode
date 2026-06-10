@@ -42,6 +42,7 @@ async function initDatabase() {
       username VARCHAR(255) UNIQUE NOT NULL,
       email VARCHAR(255) UNIQUE NOT NULL,
       password VARCHAR(255) NOT NULL,
+      role VARCHAR(50) DEFAULT 'user',
       points INT DEFAULT 0,
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -75,6 +76,19 @@ async function initDatabase() {
 
   await connection.query(createTablesSql);
   console.log('✅ Tablas users, matches y predictions creadas o existentes.');
+
+  const [columns] = await connection.query(
+    `SELECT COUNT(*) AS count
+     FROM information_schema.columns
+     WHERE table_schema = ?
+       AND table_name = 'users'
+       AND column_name = 'role'`,
+    [DB_NAME]
+  );
+
+  if (columns[0].count === 0) {
+    await connection.query(`ALTER TABLE users ADD COLUMN role VARCHAR(50) DEFAULT 'user';`);
+  }
 
   await connection.end();
   console.log('🎉 Inicialización completa.');

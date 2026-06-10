@@ -57,6 +57,19 @@ curl -X POST http://localhost:5000/api/matches \
 3. Ingresa los goles predichos para cada equipo
 4. Haz clic en **"Guardar"**
 
+### Rol Administrador
+
+- El administrador puede registrar los resultados oficiales de los partidos desde la misma pestaña **"Partidos"**.
+- Para usarlo, crea un usuario normal y luego cambia su rol a `admin` directamente en la base de datos.
+
+```sql
+USE prode;
+SELECT id, username, email, role FROM users;
+UPDATE users SET role = 'admin' WHERE email = 'tu-email@ejemplo.com';
+```
+
+- Inicia sesión con ese usuario. Al ser admin, verás el formulario para cargar resultados en la sección de partidos.
+
 ### Ver Ranking
 
 Ve a la pestaña **"Ranking"** para ver la competencia entre jugadores.

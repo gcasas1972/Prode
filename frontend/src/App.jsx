@@ -36,7 +36,11 @@ export default function App() {
             {currentUser ? (
               <div className="user-nav">
                 <span className="user-name">¡Hola, {currentUser.username}!</span>
-                <span className="user-points">Puntos: {currentUser.points}</span>
+                {currentUser.role === 'admin' ? (
+                  <span className="user-role">Administrador</span>
+                ) : (
+                  <span className="user-points">Puntos: {currentUser.points}</span>
+                )}
                 <button className="logout-btn" onClick={handleLogout}>Cerrar Sesión</button>
               </div>
             ) : null}
@@ -85,7 +89,7 @@ export default function App() {
             </nav>
 
             <div className="tab-content">
-              {activeTab === 'matches' && <Matches userId={currentUser.id} />}
+              {activeTab === 'matches' && <Matches user={currentUser} />}
               {activeTab === 'ranking' && <Ranking />}
             </div>
           </div>

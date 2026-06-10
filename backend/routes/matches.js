@@ -1,5 +1,6 @@
 import express from 'express';
 import { allAsync, getAsync, runAsync } from '../database.js';
+import { authenticateToken, requireAdmin } from '../middleware/auth.js';
 
 const router = express.Router();
 
@@ -27,7 +28,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // Add match (admin only)
-router.post('/', async (req, res) => {
+router.post('/', authenticateToken, requireAdmin, async (req, res) => {
   try {
     const { date, team1, team2, stage } = req.body;
 
@@ -47,7 +48,7 @@ router.post('/', async (req, res) => {
 });
 
 // Update match result
-router.put('/:id', async (req, res) => {
+router.put('/:id', authenticateToken, requireAdmin, async (req, res) => {
   try {
     const { result_team1, result_team2, status } = req.body;
 
