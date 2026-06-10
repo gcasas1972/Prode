@@ -1,0 +1,91 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 3528 >>
+stream
+BT /F1 10 Tf 40 800 Td (# PRODE - Guía rápida para ejecutar con Docker \(Linux\)) Tj ET
+BT /F1 10 Tf 40 788 Td () Tj ET
+BT /F1 10 Tf 40 776 Td (## Resumen) Tj ET
+BT /F1 10 Tf 40 764 Td (Esta guía explica cómo ejecutar la aplicación PRODE \(frontend + backend +) Tj ET
+BT /F1 10 Tf 40 752 Td (MySQL\) con Docker Compose en Linux, y cómo crear un usuario administrador.) Tj ET
+BT /F1 10 Tf 40 740 Td () Tj ET
+BT /F1 10 Tf 40 728 Td (## 1. Variables opcionales \(.env\)) Tj ET
+BT /F1 10 Tf 40 716 Td (Crea un archivo `.env` en la raíz del proyecto con valores sensibles \(opcional\):) Tj ET
+BT /F1 10 Tf 40 704 Td () Tj ET
+BT /F1 10 Tf 40 692 Td (```) Tj ET
+BT /F1 10 Tf 40 680 Td (JWT_SECRET=mi_secreto_largo) Tj ET
+BT /F1 10 Tf 40 668 Td (DB_USER=prode) Tj ET
+BT /F1 10 Tf 40 656 Td (DB_PASSWORD=prode_password) Tj ET
+BT /F1 10 Tf 40 644 Td (DB_NAME=prode) Tj ET
+BT /F1 10 Tf 40 632 Td (```) Tj ET
+BT /F1 10 Tf 40 620 Td () Tj ET
+BT /F1 10 Tf 40 608 Td (## 2. Iniciar con Docker Compose) Tj ET
+BT /F1 10 Tf 40 596 Td (Desde la raíz del proyecto \(donde está `docker-compose.yml`\):) Tj ET
+BT /F1 10 Tf 40 584 Td () Tj ET
+BT /F1 10 Tf 40 572 Td (```bash) Tj ET
+BT /F1 10 Tf 40 560 Td (docker compose up --build -d) Tj ET
+BT /F1 10 Tf 40 548 Td (```) Tj ET
+BT /F1 10 Tf 40 536 Td () Tj ET
+BT /F1 10 Tf 40 524 Td (Si tu sistema usa el binario antiguo:) Tj ET
+BT /F1 10 Tf 40 512 Td () Tj ET
+BT /F1 10 Tf 40 500 Td (```bash) Tj ET
+BT /F1 10 Tf 40 488 Td (docker-compose up --build -d) Tj ET
+BT /F1 10 Tf 40 476 Td (```) Tj ET
+BT /F1 10 Tf 40 464 Td () Tj ET
+BT /F1 10 Tf 40 452 Td (## 3. Verificar servicios) Tj ET
+BT /F1 10 Tf 40 440 Td (```) Tj ET
+BT /F1 10 Tf 40 428 Td (docker compose ps) Tj ET
+BT /F1 10 Tf 40 416 Td (docker compose logs -f backend) Tj ET
+BT /F1 10 Tf 40 404 Td (```) Tj ET
+BT /F1 10 Tf 40 392 Td () Tj ET
+BT /F1 10 Tf 40 380 Td (API health check:) Tj ET
+BT /F1 10 Tf 40 368 Td (```) Tj ET
+BT /F1 10 Tf 40 356 Td (curl http://localhost:5000/api/health) Tj ET
+BT /F1 10 Tf 40 344 Td (```) Tj ET
+BT /F1 10 Tf 40 332 Td () Tj ET
+BT /F1 10 Tf 40 320 Td (## 4. Acceder a la app) Tj ET
+BT /F1 10 Tf 40 308 Td (- Frontend: http://localhost:3000) Tj ET
+BT /F1 10 Tf 40 296 Td (- Backend API health: http://localhost:5000/api/health) Tj ET
+BT /F1 10 Tf 40 284 Td () Tj ET
+BT /F1 10 Tf 40 272 Td (## 5. Crear/activar administrador) Tj ET
+BT /F1 10 Tf 40 260 Td (Registra un usuario desde la app y luego conviértelo en admin desde la base de) Tj ET
+BT /F1 10 Tf 40 248 Td (datos MySQL dentro del contenedor:) Tj ET
+BT /F1 10 Tf 40 236 Td () Tj ET
+BT /F1 10 Tf 40 224 Td (```bash) Tj ET
+BT /F1 10 Tf 40 212 Td (# Ver usuarios) Tj ET
+BT /F1 10 Tf 40 200 Td (docker compose exec db mysql -u root -pprode_root_password -e "USE prode;) Tj ET
+BT /F1 10 Tf 40 188 Td (SELECT id, username, email, role FROM users;") Tj ET
+BT /F1 10 Tf 40 176 Td () Tj ET
+BT /F1 10 Tf 40 164 Td (# Convertir un usuario en admin \(reemplaza el email\)) Tj ET
+BT /F1 10 Tf 40 152 Td (docker compose exec db mysql -u root -pprode_root_password -e "USE prode;) Tj ET
+BT /F1 10 Tf 40 140 Td (UPDATE users SET role='admin' WHERE email='tu-email@ejemplo.com';") Tj ET
+BT /F1 10 Tf 40 128 Td (```) Tj ET
+BT /F1 10 Tf 40 116 Td () Tj ET
+BT /F1 10 Tf 40 104 Td (Luego inicia sesión en la app con ese usuario; verás el formulario para cargar) Tj ET
+BT /F1 10 Tf 40 92 Td (resultados.) Tj ET
+BT /F1 10 Tf 40 80 Td () Tj ET
+BT /F1 10 Tf 40 68 Td (## 6. Comandos útiles) Tj ET
+BT /F1 10 Tf 40 56 Td (```) Tj ET
+BT /F1 10 Tf 40 44 Td (# Parar) Tj ET
+endstream
+endobj
+xref
+0 5
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000290 00000 n 
+trailer
+<< /Size 5 /Root 1 0 R >>
+startxref
+3869
+%%EOF

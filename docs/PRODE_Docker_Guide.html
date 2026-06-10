@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PRODE - Guía Docker</title>
+  <style>
+    body{font-family: Arial, Helvetica, sans-serif; margin:40px; color:#222}
+    pre{background:#f5f5f5;padding:12px;border-radius:6px;overflow:auto}
+    h1,h2,h3{color:#0b3d91}
+    code{background:#eee;padding:2px 4px;border-radius:4px}
+  </style>
+</head>
+<body>
+  <h1>PRODE - Guía rápida para ejecutar con Docker (Linux)</h1>
+  <h2>Resumen</h2>
+  <p>Esta guía explica cómo ejecutar la aplicación PRODE (frontend + backend + MySQL) con Docker Compose en Linux, y cómo crear un usuario administrador.</p>
+
+  <h2>1. Variables opcionales (.env)</h2>
+  <p>Crea un archivo <code>.env</code> en la raíz del proyecto con valores sensibles (opcional):</p>
+  <pre>JWT_SECRET=mi_secreto_largo
+DB_USER=prode
+DB_PASSWORD=prode_password
+DB_NAME=prode</pre>
+
+  <h2>2. Iniciar con Docker Compose</h2>
+  <pre>docker compose up --build -d</pre>
+  <p>Si tu sistema usa el binario antiguo:</p>
+  <pre>docker-compose up --build -d</pre>
+
+  <h2>3. Verificar servicios</h2>
+  <pre>docker compose ps
+docker compose logs -f backend</pre>
+  <p>API health check:</p>
+  <pre>curl http://localhost:5000/api/health</pre>
+
+  <h2>4. Acceder a la app</h2>
+  <ul>
+    <li>Frontend: <a href="http://localhost:3000">http://localhost:3000</a></li>
+    <li>Backend API health: <a href="http://localhost:5000/api/health">http://localhost:5000/api/health</a></li>
+  </ul>
+
+  <h2>5. Crear/activar administrador</h2>
+  <p>Registra un usuario desde la app y luego conviértelo en admin desde la base de datos MySQL dentro del contenedor:</p>
+  <pre># Ver usuarios
+
+docker compose exec db mysql -u root -pprode_root_password -e "USE prode; SELECT id, username, email, role FROM users;"
+
+# Convertir un usuario en admin (reemplaza el email)
+
+docker compose exec db mysql -u root -pprode_root_password -e "USE prode; UPDATE users SET role='admin' WHERE email='tu-email@ejemplo.com';"</pre>
+  <p>Luego inicia sesión en la app con ese usuario; verás el formulario para cargar resultados.</p>
+
+  <h2>6. Comandos útiles</h2>
+  <pre># Parar
+
+docker compose down
+
+# Reiniciar y reconstruir
+
+docker compose up --build -d
+
+# Ver logs
+
+docker compose logs -f backend
+docker compose logs -f frontend</pre>
+
+  <h2>7. Notas</h2>
+  <ul>
+    <li><code>docker-compose.yml</code>, <code>backend/Dockerfile</code> y <code>frontend/Dockerfile</code> ya están en el repo.</li>
+    <li>Si quieres que cree automáticamente un usuario admin al levantar los contenedores, puedo añadir un script de seed y modificar <code>docker-compose.yml</code>.</li>
+  </ul>
+
+  <hr />
+  <p>Generado por el equipo de desarrollo de PRODE.</p>
+</body>
+</html>
